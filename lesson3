@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+class Main {
+
+    public static void main(String[] args) {
+        MakingNumber();
+    }
+
+    public static void MakingNumber() {
+        Scanner scanner = new Scanner(System.in);
+
+        int namber = (int) (Math.random() * 10);
+        System.out.println("Угадай какое число я загадал от 0 до 9, у тебя 3 попытки!");
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Попытка " + (i + 1) + ": ");
+            int input_namber = scanner.nextInt();
+            if (input_namber == namber) {
+                System.out.println("Вы угадали!");
+                break;
+            } else if (input_namber > namber) {
+                System.out.println("Это число меньше!");
+            } else {
+                System.out.println("Это число больше!");
+            }
+        }
+
+        System.out.println("Повторить игру еще раз? 1 – да / 0 – нет");
+        namber = scanner.nextInt();
+        if (namber == 1) MakingNumber();
+        else {
+            System.out.println("Спасибо за игру!");
+
+        }
+    }
+}
