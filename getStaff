@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class getStaff {
+    public static void main(String[] args) {
+        Staff[] persArray = new Staff[5];
+        Scanner scanner = new Scanner(System.in);
+        persArray[0] = new Staff("Mikhaylov", "Roman", "Evgenevich",
+                "Engeneer", "romanmix@mailbox.com",
+                "+79636585", 15000, 29);
+        persArray[1] = new Staff("Gerasimov", "Ivan", "Petrovich",
+                "Top manager", "geraiva@mailbox.com",
+                "+7236585", 95000, 32);
+        persArray[2] = new Staff("Rogachev", "Pavel", "Romanovich"
+                ,"manager", "rogapa@mailbox.com",
+                "+79432585", 70000, 45);
+        persArray[3] = new Staff("Makarov", "Igor", "Olegovich"
+                ,"manager", "makaraig@mailbox.com",
+                "+79676585", 45000, 52);
+        persArray[4] = new Staff("Stepanov", "Sergey", "Pavlovich",
+                "manager", "stepanserg@mailbox.com",
+                "+79676685", 25000, 35);
+        for (Staff e : persArray) if (e.getAge() >40) e.getFullInfo();
+    }
+}
