@@ -1,0 +1,37 @@
+public class Staff {
+    String firstname; //Фамилия
+    String name; // Имя
+    String middlename; //Отчество
+    String position; // должность
+    String mail;  // почта
+    String telephone; // телефон
+    int salary; // зарплата
+    int age; // возраст
+
+    public Staff(String firstname, String name, String middlename, String position, String mail, String telephone, int salary, int age) {
+        this.firstname = firstname;
+        this.name = name;
+        this.middlename = middlename;
+        this.position = position;
+        this.mail = mail;
+        this.telephone = telephone;
+        this.salary = salary;
+        this.age = age;
+    }
+
+    public void getFullInfo() {
+        System.out.println("firstname: " + firstname + " | name: " + name
+                + " | middlename: " + middlename + " | position: " + position
+                + " | email: " + mail + " | salary: " + salary + " | age: "
+                + age);
+    }
+
+    public void info() {
+        System.out.println(String.format("[Staff] firstname: %s, position %s, mail %s, telephone %s, salary %s," +
+                "age %s", firstname, position, mail, telephone, salary, age));
+    }
+
+    int getAge() {
+        return age;
+    }
+}
