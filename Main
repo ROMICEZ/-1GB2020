@@ -1,0 +1,51 @@
+package homework;
+
+import java.util.Scanner;
+
+    public class Main {
+
+        public static void main(String[] args)  {
+
+            Scanner scanner = new Scanner(System.in);
+
+            double distanceRun = Math.random() * 500;
+            double distanceJump = Math.random() * 3;
+            double distanceSwim = Math.random() * 0;
+            Cat cat = new Cat(distanceRun, distanceJump, distanceSwim);
+
+            distanceRun = Math.random() * 2000;
+            distanceJump = Math.random() * 2;
+            distanceSwim = Math.random() * 100;
+            Animal dog = new Dog(distanceRun, distanceJump, distanceSwim);
+
+
+            System.out.println("Кошка пробежит: " + cat.getAnimalRun() +
+                    " м. \nСобака пробежит: " + dog.getAnimalRun() + " м.");
+
+            System.out.println("Установите дистанцию для бега:");
+            double distance = scanner.nextDouble();
+
+            System.out.println("Кошка выполняет run(" + distance + "). Результат: " + cat.run(distance));
+            System.out.println("Собака выполняет run(" + distance + "). Результат: " + dog.run(distance));
+            System.out.println("\n****************\n");
+
+            System.out.println("Кошка может прыгнуть: " + cat.getAnimalJump() +
+                    " м. \nСобака может прыгнуть: " + dog.getAnimalJump() + " м.");
+
+            System.out.println("Установите высоту препятствия:");
+            distance = scanner.nextDouble();
+
+            System.out.println("Кошка выполняет jump(" + distance + "). Результат: " + cat.jump(distance));
+            System.out.println("Собака выполняет jump(" + distance + "). Результат: " + dog.jump(distance));
+            System.out.println("\n****************\n");
+
+            System.out.println("Кошка может проплыть: " + cat.getAnimalSwim() +
+                    " м. \nСобака может проплыть: " + dog.getAnimalSwim() + " м.");
+
+            System.out.println("Установите дистанцию для плавания:");
+            distance = scanner.nextDouble();
+
+            System.out.println("Кошка пытается выполнить swim(" + distance + "). Результат: " + cat.swim(distance));
+            System.out.println("Собака пытается выполнить swim(" + distance + "). Результат: " + dog.swim(distance));
+        }
+    }
